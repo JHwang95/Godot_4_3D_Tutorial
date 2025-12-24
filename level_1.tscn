@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7fe8atoqtw2c"]
+[gd_scene load_steps=5 format=3 uid="uid://c7fe8atoqtw2c"]
 
 [ext_resource type="PackedScene" uid="uid://ckfldliy4udy7" path="res://block.tscn" id="1_3hls8"]
+[ext_resource type="PackedScene" uid="uid://b3pr35gqd3aaq" path="res://steve.tscn" id="2_hbghi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ilcil"]
 size = Vector3(10, 0.5, 10)
@@ -26,14 +27,19 @@ shape = SubResource("BoxShape3D_ilcil")
 transform = Transform3D(1, 0, 0, 0, 0.33005315, 0.94396234, 0, -0.94396234, 0.33005315, 0, 12.203128, 4.7330055)
 shadow_enabled = true
 
-[node name="Block_1" parent="." instance=ExtResource("1_3hls8")]
-transform = Transform3D(1, 0, 0, 0, 0.9053392, 0.42468932, 0, -0.42468932, 0.9053392, 0, 4.0321035, 0)
+[node name="Steve" parent="." instance=ExtResource("2_hbghi")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, -3.8424041, 1.8944522, 0)
 
-[node name="Block_2" parent="." instance=ExtResource("1_3hls8")]
-transform = Transform3D(1, 0, 0, 0, 0.95708203, -0.28981698, 0, 0.28981698, 0.95708203, 0, 5.6088166, -0.74733084)
+[node name="Node3D" type="Node3D" parent="."]
 
-[node name="Block_3" parent="." instance=ExtResource("1_3hls8")]
-transform = Transform3D(-0.58839923, -0.119435094, 0.7997011, 0.004123658, 0.9885745, 0.15067731, -0.80856025, 0.091956064, -0.58118385, -0.06999926, 6.1540027, 2.3998365)
+[node name="Block" parent="Node3D" instance=ExtResource("1_3hls8")]
+transform = Transform3D(0.97586346, 0.20624202, -0.07179686, -0.21838172, 0.921616, -0.32083243, -7.450581e-09, 0.32876778, 0.9444108, 2.2221506, 3.110527, 0)
 
-[node name="Block_4" parent="." instance=ExtResource("1_3hls8")]
-transform = Transform3D(-0.5883992, -0.11943504, 0.7997011, 0.5438671, 0.6734035, 0.5007358, -0.5983269, 0.72956365, -0.33127326, -0.069999605, 5.5811205, 2.455933)
+[node name="Block2" parent="Node3D" instance=ExtResource("1_3hls8")]
+transform = Transform3D(0.5042272, -0.22314803, 0.8342421, 0.4046947, 0.91445184, 2.9802322e-08, -0.7628742, 0.33761337, 0.5513984, 0, 2.5630074, 1.8546433)
+
+[node name="Block3" parent="Node3D" instance=ExtResource("1_3hls8")]
+transform = Transform3D(0.78027767, 0.5105847, -0.3612065, -0.6254333, 0.63699484, -0.4506337, 0, 0.57752997, 0.8163695, -1.5513701, 4.8571544, -2.411079)
+
+[node name="Block4" parent="Node3D" instance=ExtResource("1_3hls8")]
+transform = Transform3D(0.6983049, -0.71274126, -0.066107005, 0.71486455, 0.6896904, 0.11530798, -0.036591392, -0.1277777, 0.9911276, -0.38748506, 5.196018, 0)
